@@ -23,5 +23,5 @@ jobs:
         os: [windows-2019]
     steps:
       - uses: actions/checkout@v3
-      - name: Install Python
-        run: choco install python
+      - name: Run Python in Docker
+        run: docker run python:3.11.4-windowsservercore-1809 python -c 'print(\\"hello\\")'
